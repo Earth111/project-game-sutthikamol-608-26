@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+}
+
+#board {
+    background-color: #ffffff;
+    border-bottom: 20px solid #1b3236;
+    background-image: url('bgimg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}  
+
+button {
+    width: 160px;
+    height: 45px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top : 20px;
+    background-color: rgb(227, 111, 10);
+    color: rgb(5, 255, 76);
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(37, 221, 221);
+    color: darkblue;
+}
+
+h1 {
+    font-size: 50px;
+    color: rgb(236, 244, 14);
+    font-family: Blocky, cursive;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(28, 91, 185);
+    margin: 20px auto;
+    width: 800px;
+} 
