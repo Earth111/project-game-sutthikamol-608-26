@@ -39,6 +39,7 @@ let velocityY = 0;
 let gravity = 0.35;
 let isCrouch = false;
 let isTransformed = false;
+let victory = false;
 
 
 
@@ -181,18 +182,31 @@ if(onCollision(playerObj, box)) {
 }
 
 
-        if(time >= 60 ) {
-            gameOver = true;
-        }
+        if(time >= 5) {
+    victory = true;
+    gameOver = true;
+}
 
             if(gameOver) {
             context.font = "normal bold 70px blocky, cursive";
             context.textAlign = "center";
-            context.fillText("Game Over!", board.width/2, board.height/2);
+            
             context.font = "normal bold 30px blocky, cursive";
+            context.fillStyle = "black";
             context.fillText("Score : "+ (score), board.width/2, 320);
             context.font = "normal bold 30px blocky, cursive";
+            context.fillStyle = "black";
             context.fillText("Lives : " + lives, board.width/2, 360);
+            if(victory) {
+                context.fillStyle = "lime";
+    context.font = "normal bold 70px blocky, cursive";
+    context.fillText("Victory!", board.width/2, board.height/2);
+} else {
+    context.fillStyle = "red";
+    context.font = "normal bold 70px blocky, cursive";
+    context.fillText("Game Over!", board.width/2, board.height/2);
+    
+}
             let gameOverPlayed = false;
             if(gameOver && !gameOverPlayed){
                  gameOverSound.currentTime = 0;
@@ -207,17 +221,20 @@ if(onCollision(playerObj, box)) {
 score+= 0.5;
 context.font = "normal bold 20px monospace";
 context.textAlign = "left";
+context.fillStyle = "white";
 
 context.fillText("Score : "+ (score.toFixed(0)),10,30);
 
 time += 0.01;
 context.font = "normal bold 20px monospace";
 context.textAlign = "right";
+context.fillStyle = "white";
 
 context.fillText("Time : "+ (time.toFixed(0)),board.width - 10,30);
 
 context.font = "normal bold 20px monospace";
 context.textAlign = "left";
+context.fillStyle = "white";
 
 context.fillText("Lives : " + lives, 10, 60);
 

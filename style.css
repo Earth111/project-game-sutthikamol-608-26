@@ -4,8 +4,8 @@ body {
 
 #board {
     background-color: #ffffff;
-    border-bottom: 20px solid #1b3236;
-    background-image: url('bgimg.jpg');
+    border-bottom: 20px solid #026f14;
+    background-image: url('truebg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
