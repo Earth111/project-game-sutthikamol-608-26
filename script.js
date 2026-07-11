@@ -182,7 +182,7 @@ if(onCollision(playerObj, box)) {
 }
 
 
-        if(time >= 5) {
+        if(time >= 60) {
     victory = true;
     gameOver = true;
 }
